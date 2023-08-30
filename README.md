@@ -7,4 +7,4 @@ hellow everyone this is my 1st imdb clone using api .
  2 . css  file 
  3 . js file 
 
-
+link  https://rahulrewar122.github.io/IMDB-Clone-By-Rahul-Rewar/

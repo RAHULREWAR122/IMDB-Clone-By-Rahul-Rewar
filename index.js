@@ -47,7 +47,7 @@ function printError(message) {
 }
 
 function getMoviesBySearch(searchString) {
-    const omdbApiKey = 'fc0b1473'; // Replace with your actual OMDB API key
+    const omdbApiKey = 'fc0b1473'; 
     const omdbUrl = `https://www.omdbapi.com/?s=${searchString}&apikey=${omdbApiKey}&page=1`;
 
     fetch(omdbUrl)

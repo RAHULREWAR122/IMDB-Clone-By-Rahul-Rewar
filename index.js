@@ -1,5 +1,4 @@
 let currentMovieStack = [];
-
 const homeButton = document.querySelector("#home");
 const searchBox = document.querySelector("#search-box");
 const goToFavouriteButton = document.querySelector("#favrioute");
@@ -12,8 +11,12 @@ function showAlert(message) {
 function renderList(actionForButton) {
     movieCardContainer.innerHTML = '';
 
+
+
     for (let i = 0; i < currentMovieStack.length; i++) {
         let movieCard = document.createElement('div');
+
+
         movieCard.classList.add("card");
 
         movieCard.innerHTML = `
@@ -27,9 +30,10 @@ function renderList(actionForButton) {
                 </div>
             </div>
         `;
-
         movieCardContainer.appendChild(movieCard);
+
     }
+
 }
 
 function printError(message) {
@@ -87,7 +91,7 @@ goToFavouriteButton.addEventListener('click', () => {
 function favourite(element) {
     let imdbID = element.dataset.id;
     let movieToAdd = currentMovieStack.find(movie => movie.imdbID === imdbID);
-    
+
     if (!movieToAdd) {
         return;
     }
@@ -113,9 +117,9 @@ goToFavouriteButton.addEventListener('click', () => {
 function remove(element) {
     let imdbID = element.dataset.id;
     let favouriteMovies = JSON.parse(localStorage.getItem("favouriteMovies")) || [];
-    
+
     let newFavouriteMovies = favouriteMovies.filter(movie => movie.imdbID !== imdbID);
-    
+
     localStorage.setItem("favouriteMovies", JSON.stringify(newFavouriteMovies));
     currentMovieStack = newFavouriteMovies;
     renderList("remove");
@@ -125,7 +129,6 @@ function renderMovieInDetail(movie) {
 
     let movieDetailCard = document.createElement('div');
     movieDetailCard.classList.add('detail-card');
-
     movieDetailCard.innerHTML = `
         <div class="inner">
             <img class="details-image" src="${movie.Poster}" alt="">
@@ -136,12 +139,11 @@ function renderMovieInDetail(movie) {
             <p class="actors"><span>Actors :</span> ${movie.Actors}</p>           
            <p class="m-plot"><span>Plot:</span> ${movie.Plot}</p>
           <p class="rel-date"><span>Release date:</span> ${movie.Released}</p>
-           <p class ="lang"><span>Language</span>${movie.Language}</p> 
+           <p class ="lang"><span>Language :</span>${movie.Language}</p> 
 
-                   </div>
+         </div>
         </div>
     `;
-
     movieCardContainer.append(movieDetailCard);
 }
 

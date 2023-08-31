@@ -62,7 +62,7 @@ function getMoviesBySearch(searchString) {
 }
 
 function getTrandingMovies() {
-    getMoviesBySearch("${searchStringURI}"); // You can replace "thor" with your desired search query
+    getMoviesBySearch("${searchStringURI}");
 }
 
 getTrandingMovies();
@@ -148,8 +148,8 @@ function renderMovieInDetail(movie) {
 }
 
 function getMovieInDetail(element) {
-    let imdbID = element.getAttribute('id'); // Use IMDb ID instead of 'id'
-    const omdbApiKey = 'fc0b1473'; // Replace with your actual OMDB API key
+    let imdbID = element.getAttribute('id'); 
+    const omdbApiKey = 'fc0b1473'; 
     const omdbUrl = `https://www.omdbapi.com/?i=${imdbID}&apikey=${omdbApiKey}&language=en-US`;
 
     fetch(omdbUrl)

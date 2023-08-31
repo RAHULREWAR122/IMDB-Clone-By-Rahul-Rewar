@@ -1,37 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMDB Clone By RR</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="swiper.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
-    
+    <!-- header  -->
     <header>
-     <div class="logo">Movie<span>aada</span>        
-     </div>
-     
+        <!-- logo  -->
+        <div class="logo">Movie<span>aada</span>
+        </div>
     </header>
-    
+
+
     <h1 class="page-title">Search Here </h1>
-     <nav>
-        
+    <nav>
+
+        <!-- Buttons and input form      -->
+        <!-- home button     -->
         <a href=""><button class="btn" id="home">Home</button></a>
-     </div>
-     <input type="text"    id="search-box" class="search" placeholder=" search here.....">
-     <br>
-     <a ><button class="btn" id="favrioute">My Fav</button></a>
+        </div>
+        <!-- input  -->
+        <input type="text" id="search-box" class="search" placeholder=" search here.....">
+        <br>
+        <!-- go to favrioute section button  -->
+        <a><button class="btn" id="favrioute">Fav</button></a>
 
-        </nav>
-        
-<main class="main-content"> 
+    </nav>
 
-    <div class="movieContainer">
-        <!-- <div class="card">
+    <!-- now the main contect is started -->
+
+    <main class="main-content">
+
+        <div class="movieContainer">
+
+            <!-- its show when we search any movie  -->
+
+            <!-- <div class="card">
             <img src="movie.jpg" alt="">
             <div class="movie-info">
                 <h4 class="title">Name</h4>
@@ -42,16 +57,16 @@
                  </div>
                 </p>
              </div> -->
-    <!-- </div> -->
+            <!-- </div> -->
 
+
+            <!-- its show when we check movie details  -->
 
 <!-- <div class="detail-card">
-    <div class="inner">
-    <img class="details-image" src="movie.jpg" alt="">
-
-      <div class="info">
+        <div class="inner">
+           <img class="details-image" src="movie.jpg" alt="">
+           <div class="info">
            <h2 class="movie-title">movie</h2>
-            
             <p class="rel-date"><span>Release date :</span> 02-03-2019</p>
             <p class="writer"><span>writer :</span> name</p>
             <p class="genar"><span>Genar :</span>genar</p>
@@ -62,20 +77,11 @@
         </div>
     </div> -->
 
-</div>
+        </div>
+    </main>
 
-
-
-</main>
-
-
-
-
-
-<!-- <script src="index.js"></script> -->
-<script src="index.js"></script>
+    <script src="index.js"></script>
 
 </body>
-</html> 
 
-
+</html>
